@@ -46,7 +46,7 @@ end
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
   # return holiday_hash[:winter].values.flatten
-  holiday_hash[:winter].map { |k, v| v }.flatten
+  holiday_hash[:winter].map { |k, v| v }.flatten # longer version
 end
 
 # given that holiday_hash looks like this:
@@ -77,7 +77,7 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
     puts "#{season.capitalize}:"
     holidays.each do |key, value|
-     puts "  #{key.to_s.split("_").map { |ele| ele.capitalize}.join(" ")}: #{value. join(", ")}"
+     puts "  #{key.to_s.split("_").map { |ele| ele.capitalize}.join(" ")}: #{value.join(", ")}"
     end
   end
 end
